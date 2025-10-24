@@ -8,5 +8,5 @@
  * @author jorge
  */
 public class Usuarios {
-    
+    int x;
 }
