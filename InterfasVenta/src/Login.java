@@ -57,7 +57,7 @@ public class Login extends javax.swing.JFrame {
         iniCaja.setLocation(new java.awt.Point(450, 450));
         iniCaja.setLocationByPlatform(true);
         iniCaja.setResizable(false);
-        iniCaja.setSize(new java.awt.Dimension(475, 316));
+        iniCaja.setSize(new java.awt.Dimension(531, 291));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setAlignmentX(720.0F);
@@ -76,9 +76,8 @@ public class Login extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Cancelar");
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 51, 51));
+        jButton4.setForeground(new java.awt.Color(204, 204, 204));
         jButton4.setText("Ingresar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,24 +99,21 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jButton3)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(95, Short.MAX_VALUE)
+                .addContainerGap(86, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(jButton3))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jButton4)))
+                .addGap(51, 51, 51)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70))
         );
 
@@ -175,12 +171,18 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("INICIAR SESIÓN");
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setText("Usuario:");
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("Contraseña:");
+
+        psw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pswActionPerformed(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(0, 51, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
@@ -212,23 +214,27 @@ public class Login extends javax.swing.JFrame {
         derLayout.setHorizontalGroup(
             derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, derLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(48, 48, 48))
-            .addGroup(derLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(derLayout.createSequentialGroup()
-                            .addComponent(jButton1)
-                            .addGap(170, 170, 170)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(derLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
                         .addGroup(derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(psw, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(61, Short.MAX_VALUE))
+                            .addGroup(derLayout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addGroup(derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(psw, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(usuario, javax.swing.GroupLayout.Alignment.LEADING, 0, 209, Short.MAX_VALUE))
+                            .addGroup(derLayout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(41, 41, 41)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(derLayout.createSequentialGroup()
+                        .addContainerGap(67, Short.MAX_VALUE)
+                        .addComponent(jLabel1)))
+                .addGap(48, 48, 48))
         );
         derLayout.setVerticalGroup(
             derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -243,11 +249,11 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(psw, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
                 .addGroup(derLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addGap(97, 97, 97))
         );
 
         L.add(der);
@@ -265,8 +271,6 @@ public class Login extends javax.swing.JFrame {
         );
 
         L.getAccessibleContext().setAccessibleName("Login");
-
-        getAccessibleContext().setAccessibleName("Login");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -321,6 +325,10 @@ public class Login extends javax.swing.JFrame {
         usuario.setSelectedItem("Seleccione una opción");
         psw.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void pswActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pswActionPerformed
 
     /**
      * @param args the command line arguments

@@ -65,23 +65,30 @@ public class Proceso extends javax.swing.JPanel {
 
         jButton1.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Impirmir último recibo");
-        Venta.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 398, -1, -1));
+        jButton1.setText("Imprimir último recibo");
+        Venta.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 398, 190, -1));
 
         jButton2.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Historial de ventas");
-        Venta.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 365, 154, -1));
-        Venta.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 365, -1, -1));
-        Venta.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 398, -1, -1));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        Venta.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 365, 190, -1));
+        Venta.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, -1, -1));
+        Venta.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("Subtotal: ");
-        Venta.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 370, -1, -1));
+        Venta.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 90, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setText("Impuesto: ");
-        Venta.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 398, -1, -1));
+        Venta.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 153));
 
@@ -133,12 +140,12 @@ public class Proceso extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(1, 1, 1)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 410, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 312, Short.MAX_VALUE)
                 .addComponent(jButton10)
                 .addContainerGap())
         );
@@ -169,23 +176,25 @@ public class Proceso extends javax.swing.JPanel {
         Venta.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 800, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("Producto: ");
         Venta.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 36, -1, -1));
 
         jTextField4.setText("código del producto");
-        Venta.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
-        Venta.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 29, 30, 30));
-        Venta.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 29, 30, 30));
+        Venta.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, 30));
+        Venta.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 30, 30));
+        Venta.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 30, 30));
 
         jLabel4.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
         jLabel4.setText("| Cliente: ");
-        Venta.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, 30));
+        Venta.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, 30));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione un cliente ->", "Cliente", "Trabajador", "Comunidad Unsis" }));
-        Venta.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 170, -1));
+        Venta.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, 200, 30));
 
         jTextField5.setText("Buscar cliente");
-        Venta.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, -1));
+        Venta.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, 30));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -237,7 +246,7 @@ public class Proceso extends javax.swing.JPanel {
         jButton8.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("Cobrar");
-        Venta.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, 50));
+        Venta.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, -1, 50));
 
         jButton9.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
@@ -248,11 +257,12 @@ public class Proceso extends javax.swing.JPanel {
                 jButton9ActionPerformed(evt);
             }
         });
-        Venta.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 180, 50));
+        Venta.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 200, 50));
 
         jLabel5.setFont(new java.awt.Font("DejaVu Sans Light", 2, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
         jLabel5.setText("$0.00");
-        Venta.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 370, 110, 50));
+        Venta.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 370, 110, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -280,6 +290,10 @@ public class Proceso extends javax.swing.JPanel {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
